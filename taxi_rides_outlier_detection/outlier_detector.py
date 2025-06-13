@@ -1,4 +1,3 @@
-
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import DBSCAN
 from sklearn import metrics
@@ -10,7 +9,7 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-def detect_outliers(taxi_rides_data: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
+def detect_outliers(taxi_rides_data: pd.DataFrame) -> (pd.DataFrame, dict):
     raw_data = taxi_rides_data
 
     data = pd.DataFrame()
