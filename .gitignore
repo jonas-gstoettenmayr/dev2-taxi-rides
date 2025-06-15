@@ -177,7 +177,5 @@ work/*.outliers.parquet
 work/*.json
 work/*.html
 workspace
-data/taxi_ride_data.parquet
-tests/taxi_rides_outlier_detection/taxi_ride_test_data.parquet
-work/2025-04-30.taxi-rides.parquet
-work/2025-05-01.taxi-rides.parquet
+work/*.parquet
+taxi_rides_outlier_detection/reference.taxi-rides.parquet
