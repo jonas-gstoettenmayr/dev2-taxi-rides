@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: taxi-rides-data-drift-detection-cronjob
-            image: ghcr.io/peterrietzler/taxi-rides-outlier-detection:1.0.1
+            image: taxi-rides-outlier-detection
             imagePullPolicy: IfNotPresent
             command: ["detect-input-data-drift", "/data"]
             volumeMounts:
@@ -20,6 +20,6 @@ spec:
           volumes:
           - name: local-folder
             hostPath:
-              path: /host_mnt/Users/peter.rietzler/Documents/private/dev2il/github/ais-dev2il-mlops-taxi-rides/work
+              path: run/desktop/mnt/host/c/Users/jojog/Documents/School/Semester_2/DEVIL2/ML_OPS/dev2-taxi-rides/work
               type: Directory
           restartPolicy: Never

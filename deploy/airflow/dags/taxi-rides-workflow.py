@@ -75,6 +75,8 @@ with DAG(
         retries=0
     )
 
+    # makes the workflow more stable by checking things with a simple
+    # python function before starting
     should_run_for_today >> outlier_detection
 
 
