@@ -181,6 +181,7 @@ model
 model.metadata.json
 .DS_Store
 *.parquet
+!data/labeled/taxi-rides.parquet
 mlruns/*
 workspace/*
 *.png
