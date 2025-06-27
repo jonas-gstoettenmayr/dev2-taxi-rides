@@ -55,6 +55,9 @@ with DAG(
 
     outlier_detection = KubernetesJobOperator(
         task_id="outlier-detection",
+        #image="taxi-rides-outlier-detection",
+        #cmds=["detect-taxi-ride-outliers", "/data"],
+        #name="detect-taxi-ride-outliers",
         job_template_file="/opt/airflow/dags/k8s-jobs/taxi-rides-outlier-detection-job.yaml",
         wait_until_job_complete=True,
         retries=0
@@ -62,6 +65,9 @@ with DAG(
 
     data_drift_detection = KubernetesJobOperator(
         task_id="data_drift_dectection",
+        #image="taxi-rides-outlier-detection",
+        #cmds=["detect-taxi-ride-outliers", "/data"],
+        #name="detect-taxi-ride-outliers",
         job_template_file="/opt/airflow/dags/k8s-jobs/taxi-rides-data-drift-detection-job.yaml",
         wait_until_job_complete=True,
         retries=0
@@ -75,8 +81,6 @@ with DAG(
         retries=0
     )
 
-    # makes the workflow more stable by checking things with a simple
-    # python function before starting
     should_run_for_today >> outlier_detection
 
 

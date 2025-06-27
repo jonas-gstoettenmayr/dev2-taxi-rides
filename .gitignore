@@ -176,6 +176,11 @@ cython_debug/
 work/*.outliers.parquet
 work/*.json
 work/*.html
-workspace
-work/*.parquet
-taxi_rides_outlier_detection/reference.taxi-rides.parquet
+notebooks/taxi-ride-outlier-detector.model.pkl
+model
+model.metadata.json
+.DS_Store
+*.parquet
+mlruns/*
+workspace/*
+*.png
